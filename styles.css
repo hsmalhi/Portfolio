@@ -7,7 +7,7 @@ body {
 }
 
 .background {
-  background-image: url("toronto-background.jpg");
+  background-image: url("assets/toronto-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -17,7 +17,7 @@ body {
 
 .background .water {
   filter: url("#turbulence");
-  background-image: url("toronto-background-map.png");
+  background-image: url("assets/toronto-background-map.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto 100%;
