@@ -1,26 +1,54 @@
 body {
   margin: 0;
-  height: 100vh;
-  width: 100vw;
+  font-family: 'Big Shoulders Text', sans-serif;
+  position: relative;
+  /* -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; */
 }
 
 .background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-image: url("background-scenery.jpg");
-  background-size: cover;
+  background-image: url("toronto-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-color: rgb(31, 31, 31);
+  height: 300vh;
 }
 
 .background .water {
-  position: absolute;
-  background-image: url("background-scenery-map.png");
-  background-size: cover;
-  top:0;
-  left:0;
-  height: 100%;
-  width: 100%;
   filter: url("#turbulence");
+  background-image: url("toronto-background-map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 300vh;
+}
+
+#turbulence-svg {
+  display: none;
+}
+
+.content {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 95%;
+  margin: 7.5vh 2.5vw 7.5vh 2.5vw;
+  z-index: 99;
+  /* background-color: rgba(204, 77, 77, 0.178); */
+}
+
+.header {
+  color: white;
+  margin-left: 4vw;
+}
+
+.header-title {
+  font-size: 8em;
+  font-weight: 600;
+  background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(120, 93, 138));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
