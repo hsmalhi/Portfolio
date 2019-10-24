@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text:400,600,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   </head>
   <body>
 
@@ -15,6 +16,9 @@
       <div class="content">
         <div class="header">
           <h1 class="header-title">Harjot Malhi</h1>
+          <p class="header-summary">
+            I'm a <strong>Full-stack developer</strong> with a background in Computer Engineering and experience consulting in the e-commerce search industry. Since leaving consulting, I have worked on various projects to revisit and enhance my programming skills. You can view some of my projects below, view my resume or learn more about me!
+          </p>
         </div>
       </div>
     </div>
@@ -22,7 +26,7 @@
     <!-- Hidden svg turbulence filter used on the water class -->
     <svg id="turbulence-svg">
       <filter id="turbulence" x="0" y="0" width="100%" height="100%">
-        <feTurbulence id="sea-filter" numOctaves="3" seed="3" baseFrequency="0.02 0.05"></feTurbulence>
+        <feTurbulence id="sea-filter" numOctaves="3" seed="3" baseFrequency="0.03 0.05"></feTurbulence>
         <feDisplacementMap scale="12" in="SourceGraphic"></feDisplacementMap>
         <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="60s" 
         keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.08;0.02 0.06" repeatCount="indefinite"/>

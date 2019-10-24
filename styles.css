@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Big Shoulders Text', sans-serif;
+  font-family: 'Roboto', sans-serif;
   position: relative;
   /* -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale; */
@@ -37,18 +37,89 @@ body {
   height: 95%;
   margin: 7.5vh 2.5vw 7.5vh 2.5vw;
   z-index: 99;
-  /* background-color: rgba(204, 77, 77, 0.178); */
+  /* background-color: rgba(204, 77,  77, 0.178); */
 }
 
 .header {
   color: white;
-  margin-left: 4vw;
+  margin-left: 6vw;
+  width: 70%;
 }
 
 .header-title {
-  font-size: 8em;
-  font-weight: 600;
-  background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(120, 93, 138));
+  font-size: 6em;
+  font-weight: 700;
+  margin: 25vh 0px 20px 0px;
+  background: -webkit-linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.247));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.header-summary {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  margin: 15px 0px 20px 0px;
+  line-height: 1.5em;
+}
+
+/****************************************** Media Queries ******************************************/
+
+@media (max-width: 767px) {
+  /* Make header centered, with margins on each side for portrait mode on tablets and phones */
+  .header {
+    width: auto;
+    margin-right: 6vw;
+  }
+
+  /* Force the header title to be 2 lined  */
+  .header-title {
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 70%;
+  }
+}
+
+/****************************************** Animations ******************************************/
+
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+  opacity: 0
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
 }
