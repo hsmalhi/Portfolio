@@ -1,9 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   position: relative;
-  /* -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale; */
 }
 
 .background {
@@ -28,20 +30,40 @@ body {
   display: none;
 }
 
+.navbar {
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 300ms linear;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.navbar-brand {
+  margin-left: 1.1em;
+}
+
+.navbar-collapse {
+  margin-left: 1.1em;
+}
+
+.navbar-nav {
+  margin-right: 1.1em;
+}
+
 .content {
   position: absolute;
   display: flex;
+  flex-direction: column;
   top: 0;
   left: 0;
   width: 95%;
   height: 95%;
   margin: 7.5vh 2.5vw 7.5vh 2.5vw;
-  z-index: 99;
-  /* background-color: rgba(204, 77,  77, 0.178); */
+  color: white;
 }
 
 .header {
-  color: white;
   margin-left: 6vw;
   width: 70%;
 }
@@ -59,21 +81,58 @@ body {
 .header-summary {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25em;
-  font-weight: 400;
+  font-weight: 500;
   margin: 15px 0px 20px 0px;
   line-height: 1.5em;
+}
+
+.header-icon {
+  color: white;
+  margin: 7.5px;
+  transition: color 200ms linear;
+  text-decoration: none !important;
+}
+
+.header-icon:hover {
+  color: rgb(235, 155, 64);
+  cursor: pointer;
+}
+
+.projects {
+  position: absolute;
+  top: 100vh;
+  margin-left: 6vw;
+  padding-top: 10vh;
+}
+
+.projects-header {
+  font-size: 4em;
 }
 
 /****************************************** Media Queries ******************************************/
 
 @media (max-width: 767px) {
-  /* Make header centered, with margins on each side for portrait mode on tablets and phones */
+  /* Navbar is always darkened on smaller screens */
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+  }
+
+  /* Remove left padding for smaller screens */
+  .navbar-brand {
+    margin-left: 0em;
+  }
+
+  /* Make header centered, with margins on each side for smaller screens */
   .header {
     width: auto;
     margin-right: 6vw;
   }
 
-  /* Force the header title to be 2 lined  */
+  .header-title {
+    margin-top: 5vh;
+  }
+
+  /* Force the header title to take up 2 lines  */
   .header-title {
     background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
     background-clip: text;
@@ -108,9 +167,9 @@ body {
 }
 
 .animated {
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 2s;
   -webkit-animation-fill-mode: both
 }
 
