@@ -52,7 +52,7 @@
         css.type = "text/css";
         document.getElementsByTagName("head")[0].appendChild(css);
       })();
-      
+
       //Collapse nav bar after click
       $(".navbar-nav>a").on("click", function() {
         $(".navbar-collapse").collapse("hide");
@@ -77,12 +77,17 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link active" href="#projects"
-              >Projects <span class="sr-only">(current)</span></a
-            >
-            <a class="nav-item nav-link" href="#About">About</a>
-            <a class="nav-item nav-link" href="#">Resume</a>
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <a class="nav-link " href="#">Resume</a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -98,8 +103,8 @@
             Computer Engineering and experience consulting in the e-commerce
             search industry. Since leaving consulting, I have turned my
             attention towards web development and strive to create elegant
-            front-end and back-end code. You can view some of my projects below,
-            view my resume or learn more about me!
+            front-end and back-end code. You can view some of my <a href="#projects" class="link-intro">projects</a> below,
+            view my <a href="#" class="link-intro">resume</a> or learn more <a href="#" class="link-intro">about me</a>!
           </p>
 
           <div class="header-icons">
