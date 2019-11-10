@@ -100,13 +100,30 @@ body {
 
 .projects {
   position: absolute;
+  width: 88%;
   top: 100vh;
-  margin-left: 6vw;
+  margin-left: 6%;
+  margin-right: 6%;
   padding-top: 10vh;
 }
 
 .projects-header {
   font-size: 4em;
+}
+
+.projects-cards{
+  margin-top: 15vh;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+}
+
+.card {
+  width: 28em;
+  height: auto;
+  margin: 2em 2em 2em 2em;
 }
 
 /****************************************** Media Queries ******************************************/
